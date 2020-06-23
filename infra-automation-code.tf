@@ -227,7 +227,7 @@ connection {
 	type = "ssh"
 	user = "ec2-user"
 	private_key = tls_private_key.webappkey.private_key_pem
-	host = aws_instance.webappos1.id
+	host = aws_instance.webappos1.public_ip
 	}
 
 provisioner "remote-exec" {
